@@ -21,24 +21,27 @@
     <script type="text/babel">
         const root = document.getElementById("root"); 
         // 
-        const MyCompo = function(){
+        const MyCompo = function(props){
+            // const MyCompo = function({data}){
             return (
                 <section>
-                <h1> { title } </h1>
+                <h1> { props.data } </h1>
             </section>
             )
         }
-        const title = "Coucou les amis ! "; 
-
-        const template = (
+        
+        function Template  (){
+            const title = "Coucou les amis ! "; 
+            return (
 
         <main>
-            <MyCompo />
+            <MyCompo data = {title } />
             
         </main>
         ) ; 
+    }
 
-        ReactDOM.render(template, root); 
+        ReactDOM.render(<Template />, root); 
        
        
         

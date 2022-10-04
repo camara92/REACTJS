@@ -20,14 +20,21 @@
     </div>
     <script type="text/babel">
         const root = document.getElementById("root"); 
+        // 
+        const MyCompo = function(){
+            return (
+                <section>
+                <h1> { title } </h1>
+            </section>
+            )
+        }
         const title = "Coucou les amis ! "; 
 
         const template = (
 
         <main>
-            <section>
-                <h1> { title } </h1>
-            </section>
+            <MyCompo />
+            
         </main>
         ) ; 
 
